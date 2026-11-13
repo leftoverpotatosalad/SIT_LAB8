@@ -22,3 +22,10 @@ class Order:
             total += line.calculate_subtotal()
 
         return total
+
+    def remove_order_line(self, index: int) -> None:
+        if 0 <= index < len(self.order_lines):
+            self.order_lines.pop(index)
+            print("Order line removed successfully.")
+        else:
+            print("Invalid order line index.")
